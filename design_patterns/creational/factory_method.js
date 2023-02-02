@@ -30,4 +30,11 @@ class Audi {
     }
 }
 
-export { Audi }
+class AudiFactory {
+    create(type) {
+        if (type === 'A4') return new Audi(type, 4000000, 'silver')
+        if (type === 'A6') return new Audi(type, 5000000, 'gold')
+    }
+}
+
+export { Audi, AudiFactory }
