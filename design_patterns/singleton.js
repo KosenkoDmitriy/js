@@ -1,8 +1,14 @@
-// singleton
-// practical usage: website map,shopping cart, player instance, etc.
-// declare as literal object or constructor
-// approaches: 1) global variable 2) singleton inside object
+/* Синглтон (порождающий паттерн) - это просто объект, который 
+есть в системе в одном экземпляре и к которому есть глобальная точка доступа
+Когда используется/понадобится?
+Нужен каждый раз, когда у нас в системе должен быть объект в одном экземпляре 
+и к которому может быть доступ из разных частей в программе
 
+Singleton.
+practical usage: website map,shopping cart, player instance, etc.
+declare as literal object or constructor
+approaches: 1) global variable 2) singleton inside object
+*/
 const isEqual = (instance, instance2) => {
 // function isEqual(instance, instance2) {
     return instance === instance2
