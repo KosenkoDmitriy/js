@@ -18,7 +18,7 @@ class CounterWithGlobalVariable {
     }
 
     increaseCount() {
-        instance.count += 1
+        instance.count++
     }
 
     getCount() {
@@ -26,5 +26,23 @@ class CounterWithGlobalVariable {
     }
 }
 
-export { isEqual, CounterWithGlobalVariable}
+// second approach (without global variable)
+class Counter { 
+    constructor() {
+        if (typeof(Counter.instance) === 'object') return Counter.instance
+        this.count = 0
+        Counter.instance = this
+        return this
+    }
+
+    increaseCount() {
+        this.count++
+    }
+
+    getCount() {
+        return this.count
+    }
+}
+
+export { isEqual, CounterWithGlobalVariable, Counter }
 // module.exports = isEqual
