@@ -26,7 +26,7 @@ class CounterWithGlobalVariable {
     }
 }
 
-// second approach (without global variable)
+// second approach without global variable (as alternative of recursive anonymous function)
 class Counter { 
     constructor() {
         if (typeof(Counter.instance) === 'object') return Counter.instance
