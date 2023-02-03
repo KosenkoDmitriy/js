@@ -8,6 +8,7 @@ describe('Facade', () => {
         expect(car.getSteps()).toContain('auto parts are ready')
         expect(car.getSteps()).toContain('electrical wiring is ready')
         expect(car.getSteps()).toContain('wheels are ready')
+        expect(car.changeColor('red')).toContain('red')
         expect(car.isReady).toBe(true)
     })
 })

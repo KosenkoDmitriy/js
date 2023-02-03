@@ -19,12 +19,15 @@ class Conveyor {
     installAutoParts() {
         return 'auto parts are ready'
     }
+
+    changeColor(color) {
+        return `Color changed to ${color}`
+    }
 }
 
 class ConveyorFacade {
     constructor(car) {
         this.car = car
-        this.steps = []
         this.isReady = false
     }
 
@@ -33,6 +36,7 @@ class ConveyorFacade {
         this.steps += this.car.addElectricalWire()
         this.steps += this.car.installAutoParts()
         this.steps += this.car.addWheels()
+        this.steps += this.car.changeColor()
         this.isReady = true
         return this
     }
