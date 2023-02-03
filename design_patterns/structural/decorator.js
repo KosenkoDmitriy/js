@@ -1,4 +1,8 @@
 /*
+Decorator - it's a structural design pattern that can extend functionality (will add new properties and methods or will override them) of the already existed object (class instance).
+
+Example: Notifier -> SMS Notifier/Push Notifier/Telegram Notifier
+
 Декоратор - это паттерн проектирования, который позволяет добавлять объектам новые свойства и методы
 оборачивать объект в класс декоратора для расширения возможностей объекта
 
