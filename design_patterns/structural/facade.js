@@ -20,9 +20,14 @@ class Conveyor {
         return 'auto parts are ready'
     }
 
-    changeColor(color) {
-        return `Color changed to ${color}`
+    setEngine() {
+        return 'set engine'
     }
+
+    unsetEngine() {
+        return 'unset engine'
+    }
+    
 }
 
 class ConveyorFacade {
@@ -36,9 +41,14 @@ class ConveyorFacade {
         this.steps += this.car.addElectricalWire()
         this.steps += this.car.installAutoParts()
         this.steps += this.car.addWheels()
-        this.steps += this.car.changeColor()
         this.isReady = true
         return this
+    }
+
+    changeEngine(engine) {
+        this.car.unsetEngine()
+        this.car.setEngine(engine)
+        return `new engine '${engine}' is ready`
     }
 
     getSteps() {
