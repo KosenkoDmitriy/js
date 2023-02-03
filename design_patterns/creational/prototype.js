@@ -11,6 +11,8 @@ Prototype
 не изменяя базовой структуры
 */
 
+import { Audi } from "./factory_method"
+
 class AudiCar {
     constructor(model, price, color, transmission) {
         this.model = model
