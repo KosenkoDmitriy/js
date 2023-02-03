@@ -4,17 +4,25 @@ Facade
 */
 
 class Conveyor {
+    assembleCarcase() {
+        return 'carcase ready '
+    }
 }
 
 class ConveyorFacade {
     constructor(car) {
         this.car = car
         this.isReady = true
+        this.steps = []
     }
 
     assembleCar() {
-        // this.car.assembleCarcas()
+        this.steps += this.car.assembleCarcase()
         return this
+    }
+
+    getSteps() {
+        return this.steps
     }
 }
 
