@@ -24,8 +24,8 @@ class Conveyor {
 class ConveyorFacade {
     constructor(car) {
         this.car = car
-        this.isReady = true
         this.steps = []
+        this.isReady = false
     }
 
     assembleCar() {
@@ -33,6 +33,7 @@ class ConveyorFacade {
         this.steps += this.car.addElectricalWire()
         this.steps += this.car.installAutoParts()
         this.steps += this.car.addWheels()
+        this.isReady = true
         return this
     }
 
