@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { RefInput, OnInputChange } from './Components/OnInputChange';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <article>
+        <OnInputChange />
+        <RefInput />
+      </article>
     </div>
   );
 }
