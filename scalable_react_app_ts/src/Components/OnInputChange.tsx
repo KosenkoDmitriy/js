@@ -50,11 +50,13 @@ const UseEffectComponent = () => {
         .catch(error => console.log(error.message))
     }, [])
     return (
-        data.length > 0 && data.map((item: Todo) => {
-            return <ul key='todos'>
-                <li key={`todo${item.id}`}>{item.todo}</li>
-            </ul>
+        <ul>
+        {
+        data.length > 0 && data.map((item: Todo, index: number) => {
+            return (index <= 2) && <li key={`todo${item.id}`}>{item.todo}</li>
         })
+        }
+        </ul>
     )
 }
 
