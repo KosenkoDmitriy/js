@@ -7,10 +7,11 @@ const OnInputChange = () => {
         console.log(data)
     }
     const [userName, setUserName] = useState('')
-    return <div>
+    return <>
+        <h1>UseState Hook</h1>
         <input type='text' onChange={onChange} />
         <input type='text' onChange={(e) => setUserName(e.target.value)} />
-    </div>
+    </>
 }
 
 const RefInput = () => {
@@ -25,6 +26,7 @@ const RefInput = () => {
 
     return (
         <>
+            <h1>UseRef (uncontrolled component):</h1>
             <button onClick={browseFile}>Please click to select file</button>
             <input type='file' ref={refInput} 
              style={{ display: 'none' }} 
@@ -50,13 +52,16 @@ const UseEffectComponent = () => {
         .catch(error => console.log(error.message))
     }, [])
     return (
-        <ul>
-        {
-        data.length > 0 && data.map((item: Todo, index: number) => {
-            return (index <= 2) && <li key={`todo${item.id}`}>{item.todo}</li>
-        })
-        }
-        </ul>
+        <>
+            <h1>3 todos from a remote api:</h1>
+            <ul>
+            {
+            data.length > 0 && data.map((item: Todo, index: number) => {
+                return (index <= 2) && <li key={`todo${item.id}`}>{item.todo}</li>
+            })
+            }
+            </ul>
+        </>
     )
 }
 

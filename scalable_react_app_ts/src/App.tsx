@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { RefInput, OnInputChange, UseEffectComponent } from './Components/OnInputChange';
+import { TodoComponent, CounterComponent } from './Components/DataSharingComponent';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         </a>
       </header> */}
       <article>
+        <CounterComponent />
+        <TodoComponent />
         <UseEffectComponent />
         <OnInputChange />
         <RefInput />
